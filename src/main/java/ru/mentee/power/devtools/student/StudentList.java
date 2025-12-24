@@ -4,20 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentList {
-  private List<Student> studentlist;  // нарушение: snake_case
+  private List<Student> studentlist;
 
   public StudentList() {  // должно быть public StudentList() {
     studentlist = new ArrayList<>();
   }
 
-  // нарушение: имя метода
-  public void addStudent(Student student) {  // должно быть addStudent
-    if (student != null) { // нарушение: нет пробела после if
+  public void addStudent(Student student) {
+    if (student != null) {
       studentlist.add(student);
     }
   }
 
-  // нарушение: длинная строка имя метода (>120 символов)
   public List<Student> getStudentsByCity(String city) {
     return studentlist.stream()
         .filter(s -> s.city().equals(city))
